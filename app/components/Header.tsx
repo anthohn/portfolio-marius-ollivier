@@ -36,7 +36,7 @@ export default function Header({ navLinks, bgColor = "bg-transparent" }: HeaderP
         <HamburgerIcon isActive={isMenuOpen} />
       </button>
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:flex`} id="navbar-default">
-      <ul className="flex flex-col justify-center text-[#FF8A00] text-5xl space-y-8 md:space-y-0 h-screen md:h-0 md:text-base text md:font-medium md:text-gray-50 md:p-0 md:flex-row md:w-full md:justify-between md:space-x-8">
+      <ul className="flex flex-col justify-center text-5xl space-y-8 md:space-y-0 h-screen md:h-0 md:text-base text md:font-medium md:p-0 md:flex-row md:w-full md:justify-between md:space-x-8">
         {navLinks.map(link => (
           <li key={link.href} className="relative">
             <Link 
