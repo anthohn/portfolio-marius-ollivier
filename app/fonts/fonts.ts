@@ -1,4 +1,7 @@
-import { Noto_Serif_Display } from "next/font/google";
+import { Noto_Serif_Display, Inter } from "next/font/google";
+
+export const inter = Inter({ subsets: ["latin"] });
+
 
 export const bodoni_moda = Noto_Serif_Display({ 
     weight: ['400'],
