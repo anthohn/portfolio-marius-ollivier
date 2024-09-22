@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from '@/app/components/Header'
+import Footer from '@/app/components/Footer'
 
 export const metadata: Metadata = {
   title: "Maris Ollivier",
@@ -19,7 +20,10 @@ export default function RootLayout({
         <Header  />
         <div className="flex justify-center ">  
           <div className=" flex flex-col w-10/12">
+          
+
             {children}
+            <Footer />
           </div>
         </div>
       </body>

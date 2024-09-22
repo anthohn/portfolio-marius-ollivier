@@ -2,7 +2,6 @@ import Title2 from "../components/Title2"
 import { projectsData } from "@/lib/data";
 import ButtonBack from "../components/ButtonBack";
 import Button from "../components/Button";
-import Footer from "@/app/components/Footer"
 
 export default function Projets() {
 
@@ -26,7 +25,6 @@ export default function Projets() {
                     </div>
                 </div>
             ))}
-            <Footer />
         </>
     )
 }

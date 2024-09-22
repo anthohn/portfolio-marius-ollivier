@@ -5,12 +5,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { links } from "@/lib/data";
 
-
-// interface HeaderProps {
-//   navLinks: { href: string; label: string }[];
-//   bgColor?: string;
-// }
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
