@@ -6,7 +6,7 @@ import Instagram from "../../public/svg/instagram.svg";
 export default function About() {
     return (
         <>
-            <footer className="w-full flex flex-wrap h-40 border-t-2 items-center" >
+            <footer className="w-full flex flex-wrap h-40 border-t-2 items-center">
                 <h2 className={`${bodoni_moda.className} text-[40px] w-1/2 text-center border-r-[3px] px-4`}>MARIUS OLIVIER</h2>
                 <div className="w-1/2 flex flex-wrap space-x-14 px-4 justify-center text-sm" >
                     <div className='flex flex-col space-y-2'>

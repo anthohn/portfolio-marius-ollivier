@@ -148,7 +148,7 @@ export default function Projects() {
         >
           {projectsContent.map((project, index) => (
             <div key={index} className='flex flex-col min-w-max' data-carousel-item>
-              <Image src={project.image} width={340} height={340} className="shadow-2xl" alt={project.label} />
+              <Image src={project.image} width={340} height={340} alt={project.label} />
               <div className='flex flex-wrap justify-between pt-10 items-center'>
                 <p className='text-2xl font-semibold'>{project.label}</p>
                 <Button href={project.href} />
