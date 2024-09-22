@@ -16,7 +16,7 @@ export default function About({ title, introText, imageSrc, sideText }: AboutPro
           <Image src={imageSrc} width={1000} height={1000} priority className="w-[600px] h-auto -z-10" alt="About image" />
         </div>
         <div className='w-4/12 flex flex-col pt-28'>
-          <Title2 text={title}></Title2>
+          <Title2>{title}</Title2>
           <p className='w-5/6 text-2xl'>{introText}</p>
         </div>
         <div className='w-3/12'>
