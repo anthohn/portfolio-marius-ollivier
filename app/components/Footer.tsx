@@ -2,7 +2,6 @@ import { bodoni_moda } from '../fonts/fonts'
 import Image from 'next/image'
 import Instagram from "../../public/svg/instagram.svg";
 
-
 export default function About() {
     return (
         <>
@@ -19,11 +18,13 @@ export default function About() {
                     </div>
                     <div className='flex flex-wrap  space-x-5 items-center '>
                         <a className='und underline decoration-[#8A1D1D] underline-offset-4 decoration-2' href="mailto:contact@marius-ollivier.ch">contact@marius-ollivier.ch</a>
-                        <a className='bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-md p-1' href="https://www.instagram.com/p/C27u1PPMJKm/" target="_blank"><Image
+                        <a className='bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-md p-1' href="https://www.instagram.com/p/C27u1PPMJKm/" target="_blank">
+                            <Image
                             priority
                             src={Instagram}
                             alt="Arrow icon"
-                        /></a>
+                            />
+                        </a>
                     </div>
                 </div>
             </footer>

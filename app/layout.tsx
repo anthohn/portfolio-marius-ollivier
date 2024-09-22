@@ -13,16 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const navLinks = [
-    { href: "/", label: "OLLIVIER" },
-    { href: "/projets", label: "PROJETS" },
-    { href: "/contact", label: "CONTACT" },
-  ];
-
   return (
     <html lang="fr">
       <body>
-        <Header navLinks={navLinks} />
+        <Header  />
         <div className="flex justify-center ">  
           <div className=" flex flex-col w-10/12">
             {children}

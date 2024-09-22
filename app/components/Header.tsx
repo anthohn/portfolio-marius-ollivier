@@ -3,13 +3,15 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import Image from "next/image";
+import { links } from "@/lib/data";
 
-interface HeaderProps {
-  navLinks: { href: string; label: string }[];
-  bgColor?: string;
-}
 
-export default function Header({ navLinks, bgColor = "bg-transparent" }: HeaderProps) {
+// interface HeaderProps {
+//   navLinks: { href: string; label: string }[];
+//   bgColor?: string;
+// }
+
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -24,7 +26,8 @@ export default function Header({ navLinks, bgColor = "bg-transparent" }: HeaderP
   };
 
   return (
-    <nav className={`md:bg-transparent absolute w-full ${isMenuOpen ? bgColor : 'bg-transparent'} transition-colors duration-200 p-10`}>
+    // <nav className={`md:bg-transparent absolute w-full ${isMenuOpen ? bgColor : 'bg-transparent'} transition-colors duration-200 p-10`}>
+    <nav className={`md:bg-transparent absolute w-full ${isMenuOpen ? '' : 'bg-transparent'} transition-colors duration-200 p-10`}>
       <button 
         type="button" 
         className="inline-flex items-center w-16 h-16 justify-center text-sm rounded-lg md:hidden" 
@@ -37,7 +40,7 @@ export default function Header({ navLinks, bgColor = "bg-transparent" }: HeaderP
       </button>
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:flex`} id="navbar-default">
       <ul className="flex flex-col justify-center text-5xl space-y-8 md:space-y-0 h-screen md:h-0 md:text-base text md:font-medium md:p-0 md:flex-row md:w-full md:justify-between md:space-x-8">
-        {navLinks.map(link => (
+        {links.map(link => (
           <li key={link.href} className="relative">
             <Link 
               className={`link ${pathname === link.href ? '' : ''}`} 

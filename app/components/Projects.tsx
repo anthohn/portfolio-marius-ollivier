@@ -5,25 +5,11 @@ import Image from 'next/image';
 import Button from './Button';
 import Title2 from './Title2';
 import arrowRight from "../../public/svg/arrowRight.svg";
-import a from '@/public/coverProjet1.png';
-import b from '@/public/coverProjet2.png';
-import c from '@/public/coverProjet3.png';
-import d from '@/public/coverProjet4.png';
-import e from '@/public/coverProjet5.png';
-
+import { projectsData } from "@/lib/data";
 
 
 export default function Projects() {
 
-  const projectsContent = [
-    { href: "/projets/GRECE-2023", label: "GRECE 2023", image: a },
-    { href: "/projets/TOURNAGES-CLIPS", label: "TOURNAGE CLIPS", image: b },
-    { href: "/projets/COVERS-ARTISTS", label: "COVERS ARTISTES", image: c },
-    { href: "/projets/sanchez", label: "SANCHEZ", image: d },
-    { href: "/projets/celia", label: "CELIA", image: e },
-
-
-  ];
   const controls = useAnimation();
 
   const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -146,11 +132,11 @@ export default function Projects() {
           animate={controls} 
           style={{ overflowX: 'hidden', whiteSpace: 'nowrap', cursor: 'grab' }}
         >
-          {projectsContent.map((project, index) => (
+          {projectsData.map((project, index) => (
             <div key={index} className='flex flex-col min-w-max' data-carousel-item>
-              <Image src={project.image} width={340} height={340} alt={project.label} />
+              <Image src={project.imageUrl} width={340} height={340} alt={project.title} />
               <div className='flex flex-wrap justify-between pt-10 items-center'>
-                <p className='text-2xl font-semibold'>{project.label}</p>
+                <p className='text-2xl font-semibold'>{project.title}</p>
                 <Button href={project.href} />
               </div>
             </div>
