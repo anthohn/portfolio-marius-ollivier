@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Maris Ollivier",
@@ -24,6 +25,7 @@ export default function RootLayout({
 
             {children}
             <Footer />
+            <Toaster position="top-right" />
           </div>
         </div>
       </body>

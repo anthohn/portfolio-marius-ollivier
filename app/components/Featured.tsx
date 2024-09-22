@@ -22,7 +22,7 @@ export default function Featured() {
             </div>
             <div className="flex flex-col w-1/2 space-y-16">
                 <div className='flex flex-col -space-y-12 w-[620px]'>
-                    <Title2 text="Featured"></Title2>
+                    <Title2>Featured</Title2>
                     <p className='text-right italic text-5xl font-semibold'>en vedette</p>
                 </div>
                 <Image src={featured2} width={800} height={800} alt="image projet 2" />

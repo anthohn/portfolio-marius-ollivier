@@ -103,7 +103,7 @@ export default function Projects() {
       <section className='flex flex-col my-80'>
         <div className='flex justify-between'>
           <div className='flex flex-col -space-y-16  w-[600px]'>
-            <Title2 text="Projets"></Title2>
+            <Title2>Projets</Title2>
             <p className='text-right italic text-5xl font-semibold'>(works)</p>
           </div>
           <div className='flex space-x-4 items-end'>
