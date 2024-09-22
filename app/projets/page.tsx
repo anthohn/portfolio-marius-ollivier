@@ -1,7 +1,7 @@
 import Title2 from "../components/Title2"
 import { projectsData } from "@/lib/data";
-import ButtonBack from "../components/ButtonBack";
-import Button from "../components/Button";
+import ButtonBack from '@/app/components/ButtonBack';
+import Button from '@/app/components/Button';
 
 export default function Projets() {
 
