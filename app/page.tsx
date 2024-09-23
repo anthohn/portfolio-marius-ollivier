@@ -2,6 +2,7 @@ import Landing from "./components/Landing";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Featured from "./components/Featured";
+import Contact from './components/Contact'
 
 export default function Home() {
 
@@ -20,6 +21,7 @@ export default function Home() {
       />
       <Projects />
       <Featured />
+      <Contact />
     </>
   );
 }

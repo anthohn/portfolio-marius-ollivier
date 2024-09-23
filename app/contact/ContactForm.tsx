@@ -28,7 +28,7 @@ export default function Contact() {
         <>
             <section className="flex justify-center text-xl">
                 <form 
-                    className="mt-10 flex flex-col space-y-10 w-2/3"
+                    className="mt-10 flex flex-col space-y-10 w-full"
                     onSubmit={async (e) => {
                         e.preventDefault();
                         const formData = new FormData(e.currentTarget);
