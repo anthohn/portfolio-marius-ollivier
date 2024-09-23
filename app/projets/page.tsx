@@ -2,6 +2,11 @@ import Title2 from "../components/Title2"
 import { projectsData } from "@/lib/data";
 import ButtonBack from '@/app/components/ButtonBack';
 import Button from '@/app/components/Button';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Projets"
+}
 
 export default function Projets() {
 

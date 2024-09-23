@@ -5,7 +5,11 @@ import Footer from '@/app/components/Footer'
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Maris Ollivier",
+  title: {
+    default: "Marius Ollivier",
+    template: "%s - Marius Ollivier"
+
+  },
   description: "Explorez l'univers de Marius Ollivier. Découvrez comment Marius Ollivier peut transformer vos visions en réalité.",
 };
 

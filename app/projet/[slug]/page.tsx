@@ -1,11 +1,12 @@
 'use client'
-import { projectsData } from '@/lib/data'; // Assure-toi que le chemin est correct
+import { projectsData } from '@/lib/data';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Title2 from '@/app/components/Title2';
 import ButtonBack from '@/app/components/ButtonBack';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion'; // Ajout pour l'animation
+import { motion, AnimatePresence } from 'framer-motion';
+
 
 export default function Page({ params }: { params: { slug: string } }) {
   const project = projectsData.find((proj) => proj.href === `/projet/${params.slug}`);
@@ -13,15 +14,15 @@ export default function Page({ params }: { params: { slug: string } }) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   if (!project) {
-    notFound(); // Affiche une page 404 si le projet n'existe pas
+    notFound();
   }
 
   const handleImageClick = (image: string) => {
-    setSelectedImage(image); // Définit l'image sélectionnée
+    setSelectedImage(image);
   };
 
   const closeModal = () => {
-    setSelectedImage(null); // Réinitialise l'image sélectionnée pour fermer le modal
+    setSelectedImage(null);
   };
 
   const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
