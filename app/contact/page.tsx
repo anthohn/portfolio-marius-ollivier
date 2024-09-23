@@ -17,7 +17,11 @@ export default function Contact() {
                     <Title2>CONTACT</Title2>
                 </div>
                 <div className="bg-[#462525] absolute top-[10rem] -z-10 h-[45rem] rounded-full blur-[10rem] w-[80rem]"></div>
-                <ContactForm />
+                <div className="flex justify-center">
+                    <div className="w-2/3">
+                        <ContactForm />
+                    </div>
+                </div>
             </div>
         </>
     );
