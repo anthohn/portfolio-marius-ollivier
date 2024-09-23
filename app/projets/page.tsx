@@ -7,7 +7,7 @@ export default function Projets() {
 
     return (
         <>
-            <div className="mt-40 ">
+            <div>
                 <ButtonBack href="/"  />
                 <Title2>PROJETS</Title2>
 

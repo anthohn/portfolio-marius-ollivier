@@ -7,7 +7,7 @@ interface LandingProps {
 
 export default function Landing({ firstName, lastName }: LandingProps) {
     return (
-        <div className="mt-48 h-screen w-full relative">
+        <div className="h-screen w-full relative">
             <div className={`${bodoni_moda.className} flex flex-col items-center -space-y-32`}>
                 {/* Titres en arrière-plan (plus petits) */}
                 <h1 className="absolute text-[60px] md:text-[180px] z-10 mt-52">

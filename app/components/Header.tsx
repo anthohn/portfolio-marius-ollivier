@@ -33,7 +33,7 @@ export default function Header() {
         <HamburgerIcon isActive={isMenuOpen} />
       </button>
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:flex`} id="navbar-default">
-      <ul className="flex flex-col justify-center text-5xl space-y-8 md:space-y-0 h-screen md:h-0 md:text-base text md:font-medium md:p-0 md:flex-row md:w-full md:justify-between md:space-x-8">
+      <ul className="flex flex-col justify-center text-5xl space-y-8 md:space-y-0 h-screen md:h-0 md:text-base md:font-semibold md:p-0 md:flex-row md:w-full md:justify-between md:space-x-8">
         {links.map(link => (
           <li key={link.href} className="relative">
             <Link 

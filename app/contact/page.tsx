@@ -24,8 +24,8 @@ export default function Projets() {
 
     return (
         <>
-            <div className="mt-40">
-                <ButtonBack href="/" />
+            <div>
+                <ButtonBack href="/"/>
                 <div className="text-center">
                     <Title2>CONTACT</Title2>
                 </div>

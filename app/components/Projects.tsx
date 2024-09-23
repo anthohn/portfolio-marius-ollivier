@@ -134,7 +134,7 @@ export default function Projects() {
         >
           {projectsData.map((project, index) => (
             <div key={index} className='flex flex-col min-w-max' data-carousel-item>
-              <Image src={project.imageUrl} width={340} height={340} alt={project.title} />
+              <Image src={project.coverProject} width={340} height={340} alt={project.title} />
               <div className='flex flex-wrap justify-between pt-10 items-center'>
                 <p className='text-2xl font-semibold'>{project.title}</p>
                 <Button href={project.href} />
