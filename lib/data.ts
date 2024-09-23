@@ -25,11 +25,11 @@ import imgClips7 from "@/public/projets/clips/imgClips7.jpg";
 import imgClips8 from "@/public/projets/clips/imgClips8.jpg";
 import imgClips9 from "@/public/projets/clips/imgClips9.jpg";
 
-import imgCoverArtistes1 from "@/public/projets/CoversArtists/imgCoverArtistes1.jpg";
-import imgCoverArtistes2 from "@/public/projets/CoversArtists/imgCoverArtistes2.jpg";
-import imgCoverArtistes3 from "@/public/projets/CoversArtists/imgCoverArtistes3.jpg";
-import imgCoverArtistes4 from "@/public/projets/CoversArtists/imgCoverArtistes4.jpg";
-import imgCoverArtistes5 from "@/public/projets/CoversArtists/imgCoverArtistes5.jpg";
+import imgCoverArtistes1 from "@/public/projets/coversArtists/imgCoverArtistes1.jpg";
+import imgCoverArtistes2 from "@/public/projets/coversArtists/imgCoverArtistes2.jpg";
+import imgCoverArtistes3 from "@/public/projets/coversArtists/imgCoverArtistes3.jpg";
+import imgCoverArtistes4 from "@/public/projets/coversArtists/imgCoverArtistes4.jpg";
+import imgCoverArtistes5 from "@/public/projets/coversArtists/imgCoverArtistes5.jpg";
 
 import imgSanchez1 from "@/public/projets/sanchez/imgSanchez1.jpg";
 import imgSanchez2 from "@/public/projets/sanchez/imgSanchez2.jpg";
