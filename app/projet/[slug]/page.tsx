@@ -32,7 +32,15 @@ export default function Page({ params }: { params: { slug: string } }) {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+          delay: 0,
+          duration: 1.5,
+          ease: "easeInOut",
+      }}
+    >
       <ButtonBack href="/projets" />
       <Title2>{project.title}</Title2>
       <div className="bg-[#462525] absolute top-[15rem] -z-10 right-[5rem] h-[35rem] rounded-full blur-[10rem] w-[60rem]"></div>
@@ -89,6 +97,6 @@ export default function Page({ params }: { params: { slug: string } }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }

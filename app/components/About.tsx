@@ -10,7 +10,7 @@ interface AboutProps {
 
 export default function About({ title, introText, imageSrc, sideText }: AboutProps) {
   return (
-    <div className="h-screen opacity-90 w-full relative">
+    <div className="opacity-90 w-full relative mt-48">
       <div className="flex flex-wrap">
         <div className='w-5/12'>
           <Image src={imageSrc} width={1000} height={1000} priority className="w-[600px] h-auto -z-10" alt="About image" />

@@ -1,10 +1,19 @@
+'use client'
 import ContactForm from '@/app/contact/ContactForm'
 import Title2 from './Title2'
+import { motion } from 'framer-motion';
 
 export default function Contact() {
     return (
         <>
-            <div className='mt-24'>
+            <motion.div className='mt-24'
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                delay: 0.2,
+                duration: 0.8,
+                ease: "easeInOut",
+                }}>
                 <div className='text-center'>
                     <Title2>Contact</Title2>
                 </div>
@@ -13,7 +22,7 @@ export default function Contact() {
                         <ContactForm />
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }
