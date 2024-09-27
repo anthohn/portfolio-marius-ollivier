@@ -1,24 +1,26 @@
 'use client'
 import React from "react";
-import { useFormStatus } from "react-dom";
 import Image from "next/image";
 import arrowTopRight from "../../public/svg/arrowTopRight.svg";
+import { motion } from "framer-motion"
+
 
 export default function SubmitBtn() {
-  const { pending } = useFormStatus();
 
   return (
-    <button
+  <motion.button 
+      whileHover={{ scale: 1.1 }}
+      transition={{ duration: 0.8}}
       type="submit"
-      className="p-3 w-32 flex items-center justify-center bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-sm"
-      disabled={pending}
+      className="p-3 w-32 flex items-center justify-between bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-sm group"
     >
-      {pending ? (
-        <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white mr-2"></div>
-      ) : (
-        <p className="text-black font-semibold">Envoyer</p>
-      )}
-      <Image priority src={arrowTopRight} alt="Arrow icon" />
-    </button>
+      <p className="button-text group-hover:invert transition duration-1000">Envoyer</p>
+      <Image
+        priority
+        src={arrowTopRight}
+        alt="Arrow icon"
+        className="group-hover:invert transition duration-1000"
+      />
+    </motion.button>
   );
 }

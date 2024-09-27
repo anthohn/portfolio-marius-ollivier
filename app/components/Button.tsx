@@ -1,16 +1,21 @@
+'use client'
 import arrowTopRight from "../../public/svg/arrowTopRight.svg";
 import Image from "next/image";
 import { inter } from '../fonts/fonts'
+import { motion } from "framer-motion"
+
 
 interface ButtonProps {
-  text?: string;  // Le texte est maintenant optionnel
-  href?: string;  
-
+  text?: string;
+  href?: string; 
 }
 
 export default function Button({ text, href  }: ButtonProps) {
   return (
-    <a href={href} className="p-3 flex flex-wrap space-x-6 bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-sm">
+    <motion.a 
+      whileHover={{ scale: 1.1 }}
+      transition={{ duration: 0.8}}
+      href={href} className="p-3 flex flex-wrap space-x-6 bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-sm group ">
       {/* Affiche le texte seulement s'il est fourni */}
       {text && (
         <p className={`${inter.className} button-text`}>
@@ -21,7 +26,8 @@ export default function Button({ text, href  }: ButtonProps) {
         priority
         src={arrowTopRight}
         alt="Arrow icon"
+        className="group-hover:invert transition duration-1000"
       />
-    </a>
+    </motion.a>
   );
 }

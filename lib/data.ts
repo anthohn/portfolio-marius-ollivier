@@ -37,7 +37,6 @@ import imgSanchez3 from "@/public/projets/sanchez/imgSanchez3.jpg";
 import imgSanchez4 from "@/public/projets/sanchez/imgSanchez4.jpg";
 import imgSanchez5 from "@/public/projets/sanchez/imgSanchez5.jpg";
 import imgSanchez6 from "@/public/projets/sanchez/imgSanchez6.jpg";
-import imgSanchez7 from "@/public/projets/sanchez/imgSanchez7.jpg";
 
 import imgCelia1 from "@/public/projets/celia/imgCelia1.jpg";
 import imgCelia2 from "@/public/projets/celia/imgCelia2.jpg";
@@ -106,7 +105,7 @@ export const projectsData: Project[] = [
     title: "SANCHEZ",
     date: "2024",
     coverProject: imgCoverSanchez,
-    images: [imgSanchez1, imgSanchez2, imgSanchez3, imgSanchez4, imgSanchez5, imgSanchez6, imgSanchez7],
+    images: [imgSanchez1, imgSanchez2, imgSanchez3, imgSanchez4, imgSanchez5, imgSanchez6],
     href: "/projet/sanchez"
   },
   {

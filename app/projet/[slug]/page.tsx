@@ -40,18 +40,18 @@ export default function Page({ params }: { params: { slug: string } }) {
       {/* Affiche toutes les images du projet avec lazy loading */}
       <div className="flex flex-wrap gap-20 justify-center">
         {project.images.map((image, index) => (
-          <Image
-            key={index}
-            src={image}
-            alt={`${project.title} image ${index + 1}`}
-            width={300}
-            height={200}
-            className="cursor-pointer transition-transform duration-300 hover:scale-105" // Animation sur hover
-            onClick={() => handleImageClick(image.src)} // Ouvre le modal avec l'image cliquée
-            placeholder="blur" // Utilisation du blur pour un chargement progressif
-            blurDataURL={image.blurDataURL} // Passer un blurDataURL pour précharger
-            loading="lazy" // Lazy loading pour améliorer la performance
-          />
+          <div key={index} className="relative w-[300px] h-[400px] cursor-pointer transition-transform duration-1000 hover:scale-105">
+            <Image
+              src={image}
+              alt={`${project.title} image ${index + 1}`}
+              fill // Utilisation de fill pour occuper tout l'espace du conteneur
+              className="object-cover" // Maintenir les proportions tout en remplissant le conteneur
+              onClick={() => handleImageClick(image.src)}
+              placeholder="blur"
+              blurDataURL={image.blurDataURL}
+              loading="lazy"
+            />
+          </div>
         ))}
       </div>
 
