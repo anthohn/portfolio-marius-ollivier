@@ -24,7 +24,7 @@ export default function RootLayout({
       <body>
         <Header  />
         <div className="flex justify-center ">  
-          <div className="flex flex-col w-10/12 mt-48">
+          <div className="flex flex-col w-10/12 max-w-screen-2xl mt-48">
             {children}
             <Footer />
             <Toaster position="top-right" />
