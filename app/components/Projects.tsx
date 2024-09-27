@@ -142,7 +142,11 @@ export default function Projects() {
             </div>
           ))}
         </motion.div>
-        <a href="/projets" className="px-8 py-3 flex flex-wrap bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-sm mt-32 space-x-16 group">
+        <motion.a 
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.8}}
+        
+        href="/projets" className="px-8 py-3 flex flex-wrap bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-sm mt-32 space-x-16 group">
           <p className="text-5xl italic text-black font-bold group-hover:invert duration-1000">TOUS LES PROJETS</p>
           <Image
             priority
@@ -150,7 +154,7 @@ export default function Projects() {
             alt="Arrow icon"
             className="group-hover:invert transition duration-700"
           />
-      </a>
+      </motion.a>
       </section>
     </>
   )
