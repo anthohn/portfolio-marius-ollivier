@@ -1,13 +1,8 @@
 "use client";
 import toast from "react-hot-toast";
 import SubmitBtn from "@/app/components/submit-btn";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-    title: "Contact",
-};
-
-export default function Contact() {
+export default function ContactForm() {
     const handleSubmit = async (formData: FormData) => {
         const response = await fetch("/api/send", {
             method: "POST",

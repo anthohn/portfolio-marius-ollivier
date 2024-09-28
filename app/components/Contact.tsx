@@ -7,7 +7,7 @@ export default function Contact() {
     return (
         <>
             <motion.div className='mt-24'
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                 delay: 0.2,

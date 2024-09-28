@@ -30,7 +30,7 @@ export default function Header() {
       duration: 2,
       ease: "easeInOut",
     }}
-    className={`md:bg-transparent absolute w-full ${isMenuOpen ? '' : 'bg-transparent'} transition-colors duration-200 p-10 z-20`}>
+    className={`md:bg-transparant w-full ${isMenuOpen ? '' : 'bg-transparent'} transition-colors duration-200 p-10 z-20`}>
       <button 
         type="button" 
         className="inline-flex items-center w-16 h-16 justify-center text-sm rounded-lg md:hidden" 

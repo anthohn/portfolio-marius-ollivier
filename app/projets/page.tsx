@@ -17,11 +17,12 @@ export default function Projets() {
                     duration: 1.5,
                     ease: "easeInOut",
                 }}
+                
             >
                 <ButtonBack href="/"  />
                 <Title2>PROJETS</Title2>
 
-                <div className="bg-[#462525] absolute top-[20rem] -z-10 left-[5rem] h-[35rem] rounded-full blur-[10rem] w-[80rem]"></div>
+                <div className="bg-[#462525] absolute top-[20rem] -z-10 h-[35rem] blur-[10rem] w-[80rem]"></div>
                 {projectsData.map((project, index) => (
                     <div key={index} className='flex flex-col space-x-10'>
                         <div className="flex flex-col space-y-6 border-b-2 pt-16">

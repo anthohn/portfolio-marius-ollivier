@@ -22,17 +22,16 @@ export default function RootLayout({
 
   return (
     <html lang="fr">
-      <body>
-        <Header  />
-        <div className="flex justify-center select-none">  
-          <div className="flex flex-col w-10/12 mt-48">
-            <CustomCursor />
-            {children}
-            <Footer />
-            <Toaster position="top-right" />
-          </div>
+      <body className="max-w-screen-2xl mx-auto">
+        <Header />
+        <div className="mt-32">
+          {children}
+          <Footer />
+          <CustomCursor />
+          <Toaster position="top-right" />
         </div>
       </body>
     </html>
   );
+  
 }
