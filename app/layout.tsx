@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { Toaster } from "react-hot-toast";
+import CustomCursor from '@/app/components/CustomCursor';
 
 export const metadata: Metadata = {
   title: {
@@ -21,16 +22,16 @@ export default function RootLayout({
 
   return (
     <html lang="fr">
-      <body>
-        <Header  />
-        <div className="flex justify-center ">  
-          <div className="flex flex-col w-10/12 max-w-screen-2xl mt-48">
-            {children}
-            <Footer />
-            <Toaster position="top-right" />
-          </div>
+      <body className="max-w-screen-2xl mx-auto">
+        <Header />
+        <div className="mt-32">
+          {children}
+          <Footer />
+          <CustomCursor />
+          <Toaster position="top-right" />
         </div>
       </body>
     </html>
   );
+  
 }

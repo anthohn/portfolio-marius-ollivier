@@ -4,6 +4,8 @@ import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import Image from "next/image";
 import { links } from "@/lib/data";
+import { motion } from 'framer-motion';
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +22,15 @@ export default function Header() {
   };
 
   return (
-    // <nav className={`md:bg-transparent absolute w-full ${isMenuOpen ? bgColor : 'bg-transparent'} transition-colors duration-200 p-10`}>
-    <nav className={`md:bg-transparent absolute w-full ${isMenuOpen ? '' : 'bg-transparent'} transition-colors duration-200 p-10`}>
+    <motion.nav 
+    initial={{ opacity: 0, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+      delay: 0,
+      duration: 2,
+      ease: "easeInOut",
+    }}
+    className={`md:bg-transparant w-full ${isMenuOpen ? '' : 'bg-transparent'} transition-colors duration-200 p-10 z-20`}>
       <button 
         type="button" 
         className="inline-flex items-center w-16 h-16 justify-center text-sm rounded-lg md:hidden" 
@@ -61,7 +70,7 @@ export default function Header() {
         ))}
       </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

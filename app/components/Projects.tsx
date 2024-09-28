@@ -95,12 +95,19 @@ export default function Projects() {
     if (t < 1) return (c / 2) * t * t + b;
     t--;
     return (-c / 2) * (t * (t - 2) - 1) + b;
-  };
-      
+  };   
 
   return (
     <>
-      <section className='flex flex-col my-80'>
+      <motion.section
+         initial={{ opacity: 0, y: 100 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{
+           delay: 0,
+           duration: 0.8,
+           ease: "easeInOut",
+         }}
+        className='flex flex-col'>
         <div className='flex justify-between'>
           <div className='flex flex-col -space-y-16  w-[600px]'>
             <Title2>Projets</Title2>
@@ -154,8 +161,8 @@ export default function Projects() {
             alt="Arrow icon"
             className="group-hover:invert transition duration-700"
           />
-      </motion.a>
-      </section>
+        </motion.a>
+      </motion.section>
     </>
   )
 }

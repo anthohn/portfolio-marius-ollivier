@@ -1,15 +1,24 @@
+'use client'
 import { bodoni_moda } from '../fonts/fonts'
 import Image from 'next/image'
 import Instagram from "../../public/svg/instagram.svg";
 import { links } from "@/lib/data";
 import Link from 'next/link';
 import swissBerry from '@/public/svg/swiss-berry.svg';
-
+import { motion } from 'framer-motion';
 
 export default function About() {
     return (
         <>
-            <footer className="w-full flex flex-wrap h-64 border-t-2 items-center mt-96">
+            <motion.footer 
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                delay: 0,
+                duration: 0.8,
+                ease: "easeInOut",
+            }}
+            className="w-full flex flex-wrap h-64 border-t-2 items-center mt-96">
                 <h2 className={`${bodoni_moda.className} text-[40px] w-1/2 text-center border-r-[3px] px-4`}>MARIUS OLIVIER</h2>
                 <div className="w-1/2 flex flex-wrap space-x-14 px-4 justify-center text-sm" >
                     <div className='flex flex-col space-y-2'>
@@ -45,7 +54,7 @@ export default function About() {
                     width={100}
                     />
                 </a>
-            </footer>
+            </motion.footer>
         </>
     )
 }
