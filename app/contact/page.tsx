@@ -14,6 +14,7 @@ export default function Contact() {
                 duration: 1.5,
                 ease: "easeInOut",
             }}
+            className="mx-10"
         >
             <ButtonBack href="/" />
             <div className="text-center">
@@ -21,7 +22,7 @@ export default function Contact() {
             </div>
             <div className="bg-[#462525] absolute top-[20rem] -z-10 h-[35rem] blur-[10rem] w-[20rem] sm:w-[30rem] md:w-[40rem] lg:w-[60rem]"></div>
             <div className="flex justify-center">
-                <div className="w-full mx-6 lg:mx-0 lg:w-2/3">
+                <div className="w-full lg:mx-0 lg:w-2/3">
                     <ContactForm />
                 </div>
             </div>
