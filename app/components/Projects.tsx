@@ -4,7 +4,6 @@ import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import Button from './Button';
 import Title2 from './Title2';
-import arrowRight from "../../public/svg/arrowRight.svg";
 import { projectsData } from "@/lib/data";
 
 
