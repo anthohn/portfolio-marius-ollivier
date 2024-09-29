@@ -18,7 +18,7 @@ export default function Contact() {
                     <Title2>Contact</Title2>
                 </div>
                 <div className='flex justify-center'>
-                    <div className='w-2/3'>
+                    <div className='w-full mx-6 lg:mx-0 lg:w-2/3'>
                         <ContactForm />
                     </div>
                 </div>
