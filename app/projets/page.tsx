@@ -17,17 +17,18 @@ export default function Projets() {
                     duration: 1.5,
                     ease: "easeInOut",
                 }}
+                className="mx-10"
                 
             >
                 <ButtonBack href="/"  />
                 <Title2>PROJETS</Title2>
 
-                <div className="bg-[#462525] absolute top-[20rem] -z-10 h-[35rem] blur-[10rem] w-[80rem]"></div>
+                <div className="bg-[#462525] absolute top-[20rem] -z-10 h-[35rem] blur-[10rem] w-[20rem] sm:w-[30rem] md:w-[40rem] lg:w-[60rem]"></div>
                 {projectsData.map((project, index) => (
                     <div key={index} className='flex flex-col space-x-10'>
                         <div className="flex flex-col space-y-6 border-b-2 pt-16">
                             <div className='flex flex-wrap space-x-10 items-center'>
-                                <p className='text-4xl md:text-5xl lg:text-6xl font-semibold italic'>{project.title}</p>
+                                <p className='text-2xl md:text-4xl lg:text-5xl xl:6xl font-semibold italic'>{project.title}</p>
                                 <Button href={project.href} />
                             </div>
                             <p className="text-2xl">{project.date}</p>

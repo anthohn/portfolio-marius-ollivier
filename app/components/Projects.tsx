@@ -4,7 +4,6 @@ import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import Button from './Button';
 import Title2 from './Title2';
-import arrowRight from "../../public/svg/arrowRight.svg";
 import { projectsData } from "@/lib/data";
 
 
@@ -107,17 +106,17 @@ export default function Projects() {
            duration: 0.8,
            ease: "easeInOut",
          }}
-        className='flex flex-col'>
+        className='flex flex-col w-full p-10'>
         <div className='flex justify-between'>
-          <div className='flex flex-col -space-y-16  w-[600px]'>
+          <div className='flex flex-col -space-y-16 w-[600px]'>
             <Title2>Projets</Title2>
-            <p className='text-right italic text-5xl font-semibold'>(works)</p>
+            <p className='hidden lg:block text-right italic text-5xl font-semibold'>(works)</p>
           </div>
           <div className='flex space-x-4 items-end'>
             <button
                 type="button"
                 onClick={handlePrevClick}
-                className='border-[4px] h-16 w-16 rounded-full flex justify-center items-center hover:bg-neutral-100 transition duration-1000 fill-neutral-100 hover:fill-neutral-900'>
+                className='hidden border-[4px] h-16 w-16 rounded-full sm:flex justify-center items-center hover:bg-neutral-100 transition duration-1000 fill-neutral-100 hover:fill-neutral-900'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                 </svg>
@@ -125,7 +124,7 @@ export default function Projects() {
             <button
                 type="button"
                 onClick={handleNextClick}
-                className='border-[4px] h-16 w-16 rounded-full flex justify-center items-center hover:bg-neutral-100 transition duration-1000 fill-neutral-100 hover hover:fill-neutral-900'>
+                className='hidden border-[4px] h-16 w-16 rounded-full sm:flex justify-center items-center hover:bg-neutral-100 transition duration-1000 fill-neutral-100 hover hover:fill-neutral-900'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                 </svg>
@@ -152,15 +151,8 @@ export default function Projects() {
         <motion.a 
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.8}}
-        
-        href="/projets" className="px-8 py-3 flex flex-wrap bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-sm mt-32 space-x-16 group items-center">
-          <p className="text-4xl italic text-black font-bold group-hover:invert duration-1000">TOUS LES PROJETS</p>
-          <Image
-            priority
-            src={arrowRight}
-            alt="Arrow icon"
-            className="group-hover:invert transition duration-700"
-          />
+          href="/projets" className="px-8 py-3 w-full mx-auto bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-sm mt-16 space-x-16 group items-center">
+          <p className="text-xl sm:text-3xl md:text-4xl italic text-center text-black font-bold group-hover:invert duration-1000">TOUS LES PROJETS</p>
         </motion.a>
       </motion.section>
     </>
