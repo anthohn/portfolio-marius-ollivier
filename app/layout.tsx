@@ -22,14 +22,14 @@ export default function RootLayout({
 
   return (
     <html lang="fr">
-      <body className="max-w-screen-2xl mx-auto">
+      <body>
         <Header />
-        <div className="mt-32">
+        <div className="max-w-screen-2xl mx-auto mt-52">
           {children}
+        </div>
           <Footer />
           <CustomCursor />
           <Toaster position="top-right" />
-        </div>
       </body>
     </html>
   );

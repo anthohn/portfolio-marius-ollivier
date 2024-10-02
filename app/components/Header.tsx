@@ -1,92 +1,112 @@
-"use client";
+'use client'
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from 'next/navigation';
-import { useState } from "react";
-import Image from "next/image";
 import { links } from "@/lib/data";
-import { motion } from 'framer-motion';
-
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
+    const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(prevState => !prevState);
-    document.body.classList.toggle('no-scroll', !isMenuOpen);
-  };
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    document.body.classList.remove('no-scroll');
-  };
+    // Gestion du scroll pour ajouter un background à la navbar
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
 
-  return (
-    <motion.nav 
-    initial={{ opacity: 0, y: 0 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{
-      delay: 0,
-      duration: 2,
-      ease: "easeInOut",
-    }}
-    viewport={{ once: true }}
-    className="transition-colors duration-200 p-12 w-full">
-      <button 
-        type="button" 
-        className="inline-flex items-center w-16 h-16 justify-center text-sm rounded-lg md:hidden" 
-        aria-controls="navbar-default" 
-        aria-expanded={isMenuOpen} 
-        onClick={toggleMenu}
-      >
-        <span className="sr-only">Open main menu</span>
-        <HamburgerIcon isActive={isMenuOpen} />
-      </button>
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:flex`} id="navbar-default">
-      <ul className="flex flex-col justify-center text-5xl space-y-8 md:space-y-0 h-screen md:h-0 md:text-base md:font-semibold md:p-0 md:flex-row md:w-full md:justify-between md:space-x-8">
-        {links.map(link => (
-          <li key={link.href} className="relative">
-            <Link 
-              className={`link ${pathname === link.href ? '' : ''}`} 
-              href={link.href} 
-              onClick={closeMenu}
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    return (
+        <>
+            {/* Utilisation de Framer Motion pour la transition du background */}
+            <motion.nav
+                className={`w-full p-6 z-50 fixed top-0 transition-all duration-300 
+                    ${scrolled || isOpen ? 'bg-[#462525] bg-opacity-90' : 'bg-transparent'}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ 
+                    delay: 0.6,
+                    duration: 1 }}
             >
-              {link.label}
-            </Link>
+                <div className="mx-auto flex items-center max-w-screen-2xl">
+                    {/* Hamburger Menu Button for small screens */}
+                    <div className="block md:hidden">
+                        <button onClick={toggleMenu} className="relative w-8 h-8 flex items-center justify-center">
+                            {/* Barre du haut */}
+                            <motion.span
+                                className="block absolute h-0.5 w-6 bg-white"
+                                initial={false}
+                                animate={isOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -8 }}
+                                transition={{ duration: 0.3 }}
+                            />
+                            {/* Barre du milieu */}
+                            <motion.span
+                                className="block absolute h-0.5 w-6 bg-white"
+                                initial={false}
+                                animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+                                transition={{ duration: 0.3 }}
+                            />
+                            {/* Barre du bas */}
+                            <motion.span
+                                className="block absolute h-0.5 w-6 bg-white"
+                                initial={false}
+                                animate={isOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 8 }}
+                                transition={{ duration: 0.3 }}
+                            />
+                        </button>
+                    </div>
 
-            {/* Ajouter le drapeau suisse sous PROJETS */}
-            {link.href === "/projets" && (
-              <div className="flex justify-center mt-2">
-                <Image 
-                  src="/swiss-flag.svg"  // Assure-toi que l'image est dans ton dossier public
-                  alt="Swiss flag"
-                  width={16}  // Taille du drapeau (tu peux ajuster)
-                  height={16} 
-                  className="object-contain"  // Pour s'assurer que l'image garde ses proportions
-                  priority  // Charger en priorité si nécessaire
-                />
-              </div>
-            )}
-          </li>
-        ))}
-      </ul>
-      </div>
-    </motion.nav>
-  );
-}
+                    {/* Navigation Links */}
+                    <div className="hidden md:flex w-full justify-between">
+                        {/* Menu visible en mode bureau */}
+                        {links.map((link) => (
+                            <Link key={link.href} href={link.href} className="text-white text-lg font-bold hover:text-gray-400">
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
 
-function HamburgerIcon({ isActive }: { isActive: boolean }) {
-  return (
-    <svg className={`ham hamRotate ham1 ${isActive ? 'active' : ''}`} viewBox="0 0 100 100" width="80">
-      <path
-        className={`line top ${isActive ? 'active-line' : ''}`}
-        d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
-      <path
-        className={`line middle ${isActive ? 'active-line' : ''}`}
-        d="m 30,50 h 40" />
-      <path
-        className={`line bottom ${isActive ? 'active-line' : ''}`}
-        d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
-    </svg>
-  );
+                    {/* Menu mobile avec AnimatePresence */}
+                    <AnimatePresence>
+                        {isOpen && (
+                            <motion.ul
+                                className="flex-col md:hidden absolute top-[80px] left-0 right-0 bg-[#462525] bg-opacity-90 text-center"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                {links.map((link) => (
+                                    <motion.li
+                                        key={link.href}
+                                        className="my-2 p-6"
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -10 }}
+                                        transition={{ duration: 0.2, delay: 0.1 }}
+                                    >
+                                        <Link href={link.href} onClick={toggleMenu} className="text-white text-lg font-bold hover:text-gray-400">
+                                            {link.label}
+                                        </Link>
+                                    </motion.li>
+                                ))}
+                            </motion.ul>
+                        )}
+                    </AnimatePresence>
+                </div>
+            </motion.nav>
+        </>
+    );
 }
