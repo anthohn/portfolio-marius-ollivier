@@ -17,6 +17,7 @@ export default function Projets() {
                     duration: 1.5,
                     ease: "easeInOut",
                 }}
+                viewport={{ once: true }}
                 className="mx-10"
                 
             >
@@ -27,7 +28,7 @@ export default function Projets() {
                 {projectsData.map((project, index) => (
                     <div key={index} className='flex flex-col space-x-10'>
                         <div className="flex flex-col space-y-6 border-b-2 pt-16">
-                            <div className='flex flex-wrap space-x-10 items-center'>
+                            <div className='flex flex-wrap space-x-2 md:space-x-10 items-center'>
                                 <p className='text-2xl md:text-4xl lg:text-5xl xl:6xl font-semibold italic'>{project.title}</p>
                                 <Button href={project.href} />
                             </div>

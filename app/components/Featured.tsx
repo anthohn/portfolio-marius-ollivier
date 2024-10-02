@@ -17,6 +17,7 @@ export default function Featured() {
                     duration: 0.8,
                     ease: "easeInOut",
                 }}
+                viewport={{ once: true }}
                 className="flex flex-col lg:flex-row items-center justify-between mt-52 px-4 md:px-8 gap-16">
                 
                 {/* Deuxième colonne */}

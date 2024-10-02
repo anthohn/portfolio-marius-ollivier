@@ -14,6 +14,7 @@ export default function Contact() {
                 duration: 1.5,
                 ease: "easeInOut",
             }}
+            viewport={{ once: true }}
             className="mx-10"
         >
             <ButtonBack href="/" />

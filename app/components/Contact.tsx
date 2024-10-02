@@ -13,7 +13,9 @@ export default function Contact() {
                 delay: 0.2,
                 duration: 0.8,
                 ease: "easeInOut",
-                }}>
+                }}
+                viewport={{ once: true }}
+                >
                 <div className='text-center'>
                     <Title2>Contact</Title2>
                 </div>
