@@ -27,7 +27,7 @@ export default function About() {
                                 </div>
                             <p className='p-6 md:p-0'>2024 - Tous droits réservés</p>
                         </div>
-                        <div className='flex flex-col space-y-6 md:space-y-6 md:flex-row md:space-x-5 items-center'>
+                        <div className='flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-5 items-center'>
                             <a className='underline decoration-[#8A1D1D] underline-offset-4 decoration-2' href="mailto:contact@marius-ollivier.ch">contact@marius-ollivier.ch</a>
                             <a className='bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-md p-1' href="https://www.instagram.com/p/C27u1PPMJKm/" target="_blank">
                                 <Image
