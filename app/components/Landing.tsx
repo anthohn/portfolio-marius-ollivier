@@ -20,6 +20,7 @@ export function Landing() {
             duration: 1,
             ease: "easeInOut",
           }}
+          viewport={{ once: true }}
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
@@ -36,6 +37,7 @@ export function Landing() {
             duration: 1,
             ease: "easeInOut",
           }}
+          viewport={{ once: true }}
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
@@ -55,6 +57,7 @@ export function Landing() {
             duration: 1,
             ease: "easeInOut",
           }}
+          viewport={{ once: true }}
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-red-400 blur-2xl"
         ></motion.div>
         <motion.div
@@ -65,6 +68,7 @@ export function Landing() {
             duration: 1,
             ease: "easeInOut",
           }}
+          viewport={{ once: true }}
           className="absolute inset-auto z-50 h-0.5 w-[60rem] -translate-y-[7rem] bg-red-400 "
         ></motion.div>
 
@@ -80,6 +84,7 @@ export function Landing() {
             duration: 1,
             ease: "easeInOut",
           }}
+          viewport={{ once: true }}
           className={`${bodoni_moda.className} bg-gradient-to-b from-red-400 to-white pb-40 pt-40 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent xl:text-[180px]`}
         >
           Marius Ollvier

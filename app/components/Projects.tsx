@@ -128,6 +128,7 @@ export default function Projects() {
            duration: 0.8,
            ease: "easeInOut",
          }}
+         viewport={{ once: true }}
         className='flex flex-col w-full p-10'>
         <div className='flex justify-between'>
           <div className='flex flex-col -space-y-16 w-[600px]'>

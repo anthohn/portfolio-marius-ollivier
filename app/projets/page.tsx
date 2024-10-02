@@ -17,6 +17,7 @@ export default function Projets() {
                     duration: 1.5,
                     ease: "easeInOut",
                 }}
+                viewport={{ once: true }}
                 className="mx-10"
                 
             >

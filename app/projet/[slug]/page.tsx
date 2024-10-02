@@ -40,6 +40,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           duration: 1.5,
           ease: "easeInOut",
       }}
+      viewport={{ once: true }}
     >
       <ButtonBack href="/projets" />
       <Title2>{project.title}</Title2>

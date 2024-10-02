@@ -30,6 +30,7 @@ export default function Header() {
       duration: 2,
       ease: "easeInOut",
     }}
+    viewport={{ once: true }}
     className="transition-colors duration-200 p-12 w-full">
       <button 
         type="button" 
