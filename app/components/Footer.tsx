@@ -36,7 +36,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <a className="flex w-full justify-center space-x-4 items-center" href="https://www.swiss-berry.com" target="_blank">
+                <a className="flex w-full justify-center space-x-4 items-center" href="https://swiss-berry.com" target="_blank">
                     <p className="text-gray-50">Website made by</p>
                     <Image
                     priority
