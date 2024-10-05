@@ -111,7 +111,7 @@ export function Landing() {
             </div>
             <div className="flex flex-col">
               <p className="text-lg font-bold">Dernier projet</p>
-              <p>Cover artistes</p>
+              <p>Covers artistes</p>
               </div>
               <div>
                 <Button
