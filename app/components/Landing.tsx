@@ -77,18 +77,18 @@ export function Landing() {
             <div className="absolute inset-auto z-50 h-44 w-full -translate-y-[12.5rem] bg-[#171717]"></div>
           </div>
         </div>
-        <motion.h1
-          initial={{ opacity: 0, y: 200 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0,
-            duration: 1,
-            ease: "easeInOut",
-          }}
-          viewport={{ once: true }}
-          className={`${bodoni_moda.className} text-center leading-none text-[100px] md:leading-normal  md:text-[105px] lg:text-[140px] xl:text-[160px] 2xl:text-[180px] bg-clip-text text-transparent bg-gradient-to-b from-red-400 to-white`}>
-          Marius Ollivier
-        </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0,
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            viewport={{ once: true }}
+            className={`${bodoni_moda.className} text-center leading-none text-[100px] md:leading-normal md:text-[105px] lg:text-[140px] xl:text-[160px] 2xl:text-[180px] bg-clip-text text-transparent bg-gradient-to-b from-red-400 to-white`}>
+            Marius Ollivier
+          </motion.h1>
       </div>
       <div className="flex justify-center md:justify-end m-10">
         <div className="flex flex-wrap space-x-5 md:space-x-10 items-center bg-red-500 bg-opacity-20 w-auto p-4 shadow-2xl shadow-red-500/40 border-2 border-red-400 rounded-xl">
