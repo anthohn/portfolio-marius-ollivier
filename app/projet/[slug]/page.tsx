@@ -41,13 +41,14 @@ export default function Page({ params }: { params: { slug: string } }) {
           ease: "easeInOut",
       }}
       viewport={{ once: true }}
+      className='mx-10 mt-24 md:mt-40 lg:mt-52'
     >
       <ButtonBack href="/projets" />
       <Title2>{project.title}</Title2>
       <div className="bg-[#462525] absolute top-[15rem] -z-10 right-[5rem] h-[35rem] rounded-full blur-[10rem] w-[60rem]"></div>
 
       {/* Affiche toutes les images du projet avec lazy loading */}
-      <div className="flex flex-wrap gap-20 justify-center">
+      <div className="flex flex-wrap gap-20 justify-center ">
         {project.images.map((image, index) => (
           <div key={index} className="relative w-[300px] h-[400px] cursor-pointer transition-transform duration-1000 hover:scale-105">
             <Image

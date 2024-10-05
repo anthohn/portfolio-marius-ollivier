@@ -3,6 +3,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { bodoni_moda } from '../fonts/fonts'
+import Image from "next/image";
+import imgCoverArtistes1 from "@/public/projets/coversArtists/imgCoverArtistes1.jpg";
+import Button from "./Button";
 
 export function Landing() {
   return (
@@ -71,7 +74,7 @@ export function Landing() {
               className="absolute inset-auto z-50 h-0.5 w-[60rem] -translate-y-[7rem] bg-red-400 "
             ></motion.div>
 
-            <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-[#171717]"></div>
+            <div className="absolute inset-auto z-50 h-44 w-full -translate-y-[12.5rem] bg-[#171717]"></div>
           </div>
         </div>
         <motion.h1
@@ -83,13 +86,32 @@ export function Landing() {
             ease: "easeInOut",
           }}
           viewport={{ once: true }}
-          className={`${bodoni_moda.className} text-center text-[80px] md:text-[105px] lg:text-[140px] xl:text-[160px] 2xl:text-[180px] bg-clip-text text-transparent bg-gradient-to-b from-red-500 to-red-100`}>
-          Marius Ollvier
+          className={`${bodoni_moda.className} text-center leading-none text-[100px] md:leading-normal  md:text-[105px] lg:text-[140px] xl:text-[160px] 2xl:text-[180px] bg-clip-text text-transparent bg-gradient-to-b from-red-400 to-white`}>
+          Marius Ollivier
         </motion.h1>
       </div>
-      {/* <div className="flex w-full bg-red-500 justify-end">
-        <h1>test</h1>
-      </div> */}
+      <div className="flex justify-center md:justify-end m-10">
+        <div className="flex flex-wrap space-x-5 md:space-x-10 items-center bg-red-500 bg-opacity-20 w-auto p-4 shadow-2xl shadow-red-500/40 border-2 border-red-400 rounded-xl">
+          <div className="w-[50px] md:w-[70px]">
+            <Image 
+              src={imgCoverArtistes1} 
+              width={340} 
+              height={340} 
+              alt='Image dernier projet'
+              className="rounded-md"
+            />
+          </div>
+          <div className="flex flex-col">
+            <p className="text-lg font-bold">Dernier projet</p>
+            <p>Cover artistes</p>
+            </div>
+            <div>
+              <Button
+                href="/projet/covers-artistes"
+              ></Button>
+          </div>
+        </div>
+      </div>
       </div>
     </>
   );
