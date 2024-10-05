@@ -15,7 +15,7 @@ export default function Contact() {
                 ease: "easeInOut",
             }}
             viewport={{ once: true }}
-            className="mx-10"
+            className="mx-10 mt-24 md:mt-40 lg:mt-52"
         >
             <ButtonBack href="/" />
             <div className="text-center">

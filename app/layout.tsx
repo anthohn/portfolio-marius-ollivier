@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="fr">
       <body>
         <Header />
-        <div className="max-w-screen-2xl mx-auto mt-24 md:mt-40 lg:mt-52">
+        <div className="max-w-screen-2xl mx-auto">
           {children}
         </div>
           <Footer />
