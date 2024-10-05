@@ -47,8 +47,16 @@ export default function Projects() {
     const handleTouchMove = (e: TouchEvent) => {
       if (!isDragging) return;
       const x = e.touches[0].clientX - startX;
+
+      if (Math.abs(x) > 0) {
+        e.preventDefault();
+      }
+      
       element.scrollLeft = scrollLeft - x;
     };
+
+    element.addEventListener('touchmove', handleTouchMove, { passive: false });
+
   
     const handleTouchEnd = () => {
       setIsDragging(false);
@@ -92,7 +100,7 @@ export default function Projects() {
   };
   
   const animateScroll = (element: HTMLElement, start: number, end: number) => {
-    const duration = 300; // Durée de l'animation en millisecondes
+    const duration = 600; // Durée de l'animation en millisecondes
     const startTime = performance.now();
   
     const scrollStep = (timestamp: number) => {
@@ -171,7 +179,8 @@ export default function Projects() {
                   src={project.coverProject} 
                   width={340} 
                   height={340} 
-                  alt={project.title} 
+                  alt={project.title}
+                  draggable="false"
                 />
                 <div className="flex flex-wrap justify-between pt-10 items-center">
                   <p className="text-lg sm:text-xl md:text-2xl font-semibold">{project.title}</p>
