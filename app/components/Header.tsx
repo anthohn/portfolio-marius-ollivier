@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { links } from "@/lib/data";
+import Image from "next/image";
+import Swiss from '@/public/swiss-flag.svg'
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,9 +42,9 @@ export default function Header() {
                     delay: 0.6,
                     duration: 1 }}
             >
-                <div className="mx-auto flex items-center max-w-screen-2xl">
+                <div className="mx-auto flex items-center max-w-screen-2xl ">
                     {/* Hamburger Menu Button for small screens */}
-                    <div className="block md:hidden">
+                    <div className="flex w-full justify-end md:hidden">
                         <button onClick={toggleMenu} className="relative w-8 h-8 flex items-center justify-center">
                             {/* Barre du haut */}
                             <motion.span
@@ -69,20 +71,29 @@ export default function Header() {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="hidden md:flex w-full justify-between">
+                    <div className="hidden md:flex md:flex-col md:space-y-2 w-full">
+                        <div className="md:flex justify-between">
                         {/* Menu visible en mode bureau */}
-                        {links.map((link) => (
-                            <Link key={link.href} href={link.href} className="text-white text-lg font-bold hover:text-gray-400">
-                                {link.label}
-                            </Link>
-                        ))}
+                            {links.map((link) => (
+                                <Link key={link.href} href={link.href} className="text-white text-lg font-bold hover:text-gray-400">
+                                    {link.label}
+                                </Link>
+                            ))}
+                        </div>
+                        <Image 
+                            src={Swiss}
+                            alt="Swiss flag"
+                            width={16}
+                            height={16} 
+                            className="mx-auto"
+                            />
                     </div>
 
                     {/* Menu mobile avec AnimatePresence */}
                     <AnimatePresence>
                         {isOpen && (
                             <motion.ul
-                                className="flex-col md:hidden absolute top-[80px] left-0 right-0 bg-[#462525] bg-opacity-90 text-center"
+                                className="flex-col md:hidden absolute top-[112px] left-0 right-0 bg-[#462525] bg-opacity-90 text-center"
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: 'auto', opacity: 1 }}
                                 exit={{ height: 0, opacity: 0 }}

@@ -1,7 +1,7 @@
 import { bodoni_moda } from '../fonts/fonts'
 
 interface ButtonProps {
-  children: string;  // Le texte est maintenant optionnel
+  children: string;
 }
 
 export default function Title2({ children }: ButtonProps) {
