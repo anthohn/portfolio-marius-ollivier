@@ -132,12 +132,12 @@ export default function Projects() {
           }}
          whileInView={{ opacity: 1, y: 0 }}
          transition={{
-           delay: 0,
-           duration: 0.8,
+           delay: 0.2,
+           duration: 1,
            ease: "easeInOut",
          }}
          viewport={{ once: true }}
-        className='flex flex-col w-full p-10'>
+        className='flex flex-col w-full p-10 mt-20'>
         <div className='flex justify-between'>
           <div className='flex flex-col -space-y-16 w-[600px]'>
             <Title2>Projets</Title2>
