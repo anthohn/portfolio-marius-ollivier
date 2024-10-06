@@ -10,12 +10,12 @@ import Button from "./Button";
 export function Landing() {
   return (
     <>
-      <div className="h-[850px] md:h-screen max-h-[1000px] flex flex-col justify-between">
-        <div className="flex flex-col -space-y-64">
+      <div className="h-[850px] md:h-screen max-h-[1000px] flex flex-col justify-between ">
+        <div className="flex flex-col -space-y-72 md:-space-y-64  mt-10">
           <div className={cn("relative flex h-[500px] flex-col items-center justify-center overflow-hidden w-full")}>
             <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate ">
               <motion.div
-                initial={{ opacity: 0.5, width: "15rem" }}
+                initial={{ opacity: 0.5, width: "10%" }}
                 whileInView={{ opacity: 1, width: "62.5%" }} // Utilisation de pourcentages pour être plus flexible
                 
                 transition={{
@@ -33,7 +33,7 @@ export function Landing() {
                 <div className="absolute w-40 h-[100%] left-0 bg-[#171717] bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
               </motion.div>
               <motion.div
-                initial={{ opacity: 0.5, width: "15rem" }}
+                initial={{ opacity: 0.5, width: "10%" }}
                 whileInView={{ opacity: 1, width: "62.5%" }} // Utilisation de pourcentages pour être plus flexible
                 transition={{
                   delay: 0,
@@ -52,7 +52,7 @@ export function Landing() {
               <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-[#171717] blur-2xl"></div>
               <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
               <motion.div
-                initial={{ width: "8rem" }}
+                initial={{ width: "5%" }}
                 whileInView={{ width: "16rem" }}
                 transition={{
                   delay: 0,
@@ -63,7 +63,7 @@ export function Landing() {
                 className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-red-400 blur-2xl"
               ></motion.div>
               <motion.div
-                initial={{ width: "15rem" }}
+                initial={{ width: "10%" }}
                 whileInView={{ opacity: 1, width: "62.5%" }}
                 transition={{
                   delay: 0,
@@ -82,6 +82,10 @@ export function Landing() {
               <div className="absolute inset-auto z-50 h-44 w-full -translate-y-[12.5rem] bg-[#171717]"></div>
             </div>
           </div>
+
+
+
+          {/* <div className=""> */}
           <motion.h1
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -91,10 +95,33 @@ export function Landing() {
               ease: "easeInOut",
             }}
             viewport={{ once: true }}
-            className={`${bodoni_moda.className} text-center leading-none text-[100px] md:leading-normal md:text-[105px] lg:text-[140px] xl:text-[160px] 2xl:text-[180px] bg-clip-text text-transparent bg-gradient-to-b from-red-400 to-white`}>
+            className={`${bodoni_moda.className} text-center leading-none text-[100px] md:leading-normal md:text-[105px] lg:text-[140px] xl:text-[160px] 2xl:text-[180px] bg-clip-text text-transparent bg-gradient-to-b from-red-300 to-white`}>
             Marius Ollivier
           </motion.h1>
+          
         </div>
+        <motion.h1
+            initial={{ opacity: 0, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.8,
+              duration: 1.4,
+              ease: "easeInOut",
+            }}
+            viewport={{ once: true }}
+            className={`${bodoni_moda.className} -mt-40 md:-mt-48 lg:-mt-56 xl:-mt-60 2xl:-mt-64 text-center italic leading-none md:leading-normal text-[30px] md:text-[32px] lg:text-[34px] xl:text-[36px] 2xl:text-[40px] bg-clip-text text-transparent bg-gradient-to-b from-red-300 to-white`}>
+            Photographe Suisse
+          </motion.h1>
+          {/* </div> */}
+
+
+
+
+
+
+
+
+
         <motion.div
         initial={{ opacity: 0, y: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
