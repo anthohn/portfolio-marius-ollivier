@@ -10,13 +10,14 @@ import Button from "./Button";
 export function Landing() {
   return (
     <>
-      <div className="h-screen max-h-[1000px] flex flex-col justify-between">
+      <div className="h-[850px] md:h-screen max-h-[1000px] flex flex-col justify-between">
         <div className="flex flex-col -space-y-64">
           <div className={cn("relative flex h-[500px] flex-col items-center justify-center overflow-hidden w-full")}>
             <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate ">
               <motion.div
                 initial={{ opacity: 0.5, width: "15rem" }}
-                whileInView={{ opacity: 1, width: "60rem" }}
+                whileInView={{ opacity: 1, width: "62.5%" }} // Utilisation de pourcentages pour être plus flexible
+                
                 transition={{
                   delay: 0,
                   duration: 1,
@@ -33,7 +34,7 @@ export function Landing() {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0.5, width: "15rem" }}
-                whileInView={{ opacity: 1, width: "60rem" }}
+                whileInView={{ opacity: 1, width: "62.5%" }} // Utilisation de pourcentages pour être plus flexible
                 transition={{
                   delay: 0,
                   duration: 1,
@@ -50,7 +51,6 @@ export function Landing() {
               </motion.div>
               <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-[#171717] blur-2xl"></div>
               <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
-              <div className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-red-500 opacity-50 blur-3xl"></div>
               <motion.div
                 initial={{ width: "8rem" }}
                 whileInView={{ width: "16rem" }}
@@ -64,14 +64,19 @@ export function Landing() {
               ></motion.div>
               <motion.div
                 initial={{ width: "15rem" }}
-                whileInView={{ width: "60rem" }}
+                whileInView={{ opacity: 1, width: "62.5%" }}
                 transition={{
                   delay: 0,
                   duration: 1,
                   ease: "easeInOut",
                 }}
                 viewport={{ once: true }}
-                className="absolute inset-auto z-50 h-0.5 w-[60rem] -translate-y-[7rem] bg-red-400 "
+
+
+
+                className="absolute inset-auto z-50 h-0.5 w-[60rem] -translate-y-[7rem] bg-red-400"
+
+
               ></motion.div>
 
               <div className="absolute inset-auto z-50 h-44 w-full -translate-y-[12.5rem] bg-[#171717]"></div>
