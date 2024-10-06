@@ -10,7 +10,7 @@ import Button from "./Button";
 export function Landing() {
   return (
     <>
-      <div className="h-screen max-h-[1000px] flex flex-col justify-between">
+      <div className="h-[850px] md:h-screen max-h-[1000px] flex flex-col justify-between">
         <div className="flex flex-col -space-y-64">
           <div className={cn("relative flex h-[500px] flex-col items-center justify-center overflow-hidden w-full")}>
             <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate ">
