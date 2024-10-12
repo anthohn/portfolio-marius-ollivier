@@ -30,7 +30,7 @@ export default function About() {
                                 <Image
                                 priority
                                 src={Instagram}
-                                alt="Arrow icon"
+                                alt="instagram"
                                 />
                             </a>
                         </div>
@@ -41,7 +41,7 @@ export default function About() {
                     <Image
                     priority
                     src={swissBerry}
-                    alt="Arrow icon"
+                    alt="Swiss Berry icon"
                     width={100}
                     />
                 </a>

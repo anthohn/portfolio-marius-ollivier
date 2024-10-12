@@ -45,7 +45,12 @@ export default function Header() {
                 <div className="mx-auto flex items-center max-w-screen-2xl ">
                     {/* Hamburger Menu Button for small screens */}
                     <div className="flex w-full justify-end md:hidden">
-                        <button onClick={toggleMenu} className="relative w-8 h-8 flex items-center justify-center">
+                        <button 
+                        onClick={toggleMenu} 
+                        className="relative w-8 h-8 flex items-center justify-center"
+                        aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"} // Ajout du label accessible
+                        >
+                            
                             {/* Barre du haut */}
                             <motion.span
                                 className="block absolute h-0.5 w-6 bg-white"
@@ -98,6 +103,7 @@ export default function Header() {
                                 animate={{ height: 'auto', opacity: 1 }}
                                 exit={{ height: 0, opacity: 0 }}
                                 transition={{ duration: 0.3 }}
+                                role="menu" // Ajout du rôle pour l'accessibilité
                             >
                                 {links.map((link) => (
                                     <motion.li
@@ -107,6 +113,7 @@ export default function Header() {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -10 }}
                                         transition={{ duration: 0.2, delay: 0.1 }}
+                                        role="menuitem" // Ajout du rôle pour l'accessibilité
                                     >
                                         <Link href={link.href} onClick={toggleMenu} className="text-white text-lg font-bold hover:text-gray-400">
                                             {link.label}
