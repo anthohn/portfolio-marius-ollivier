@@ -27,9 +27,9 @@ export default function RootLayout({
         <div className="max-w-screen-2xl mx-auto">
           {children}
         </div>
-          <Footer />
-          <CustomCursor />
-          <Toaster position="top-right" />
+        <Footer />
+        <CustomCursor />
+        <Toaster position="top-right" />
       </body>
     </html>
   );
