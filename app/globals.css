@@ -2,22 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #171717;
-  --foreground: #EEEEEE;
-}
-
 /* Couleur text placeholder */
 input::placeholder, 
 textarea::placeholder {
   color: var(--foreground);
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .button-text {
@@ -29,5 +17,71 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;        /* Fond principal de l'application ou de la page */
+    --foreground: 0 0% 3.9%;        /* Texte ou icônes principaux */
+    --card: 0 0% 100%;              /* Fond des cartes ou panneaux d'interface */
+    --card-foreground: 0 0% 3.9%;   /* Texte ou icônes sur les cartes */
+    --popover: 0 0% 100%;           /* Fond des infobulles, menus déroulants ou superpositions */
+    --popover-foreground: 0 0% 3.9%;/* Texte ou icônes sur les popovers */
+    --primary: 0 0% 9%;             /* Couleur principale pour boutons, liens ou éléments clés */
+    --primary-foreground: 0 0% 98%; /* Texte ou icônes sur les éléments principaux */
+    --secondary: 0 0% 96.1%;        /* Fond pour éléments d'interface moins mis en avant */
+    --secondary-foreground: 0 0% 9%;/* Texte ou icônes sur le fond secondaire */
+    --muted: 0 0% 96.1%;            /* Fond pour zones subtiles ou moins importantes */
+    --muted-foreground: 0 0% 45.1%; /* Texte ou icônes atténués, moins mis en avant */
+    --accent: 0 0% 96.1%;           /* Fond pour mettre en valeur certaines parties */
+    --accent-foreground: 0 0% 9%;   /* Texte ou icônes sur le fond d'accent */
+    --destructive: 0 84.2% 60.2%;   /* Couleur pour alertes, erreurs ou actions de suppression */
+    --destructive-foreground: 0 0% 98%; /* Texte ou icônes sur les éléments destructifs */
+    --border: 0 0% 89.8%;           /* Bordure pour délimiter ou encadrer des éléments */
+    --input: 0 0% 89.8%;            /* Bordures ou fonds des champs de saisie */
+    --ring: 0 0% 3.9%;              /* Contour pour les anneaux de focus, ex. sur boutons ou inputs */
+    --chart-1: 12 76% 61%;          /* Couleur pour visualisations de données, ex. barres ou lignes */
+    --chart-2: 173 58% 39%;         /* Couleur pour contrastes dans les graphiques */
+    --chart-3: 197 37% 24%;         /* Couleur pour différencier des données dans les graphiques */
+    --chart-4: 43 74% 66%;          /* Couleur pour varier les visualisations graphiques */
+    --chart-5: 27 87% 67%;          /* Couleur pour distinction supplémentaire dans les graphiques */
+    --radius: 0.5rem;               /* Rayon de bordure, contrôle l'arrondi des coins des éléments */
+  }
+  .dark {
+    --background: 0 0% 3.9%;        /* Fond principal en mode sombre */
+    --foreground: 0 0% 98%;         /* Texte ou icônes principaux en mode sombre */
+    --card: 0 0% 3.9%;              /* Fond des cartes ou panneaux en mode sombre */
+    --card-foreground: 0 0% 98%;    /* Texte ou icônes sur les cartes en mode sombre */
+    --popover: 0 0% 3.9%;           /* Fond des infobulles ou menus en mode sombre */
+    --popover-foreground: 0 0% 98%; /* Texte ou icônes sur les popovers en mode sombre */
+    --primary: 0 0% 98%;            /* Couleur principale pour boutons ou éléments clés en mode sombre */
+    --primary-foreground: 0 0% 9%;  /* Texte ou icônes sur les éléments principaux en mode sombre */
+    --secondary: 0 0% 14.9%;        /* Fond pour éléments secondaires en mode sombre */
+    --secondary-foreground: 0 0% 98%; /* Texte ou icônes sur le fond secondaire en mode sombre */
+    --muted: 0 0% 14.9%;            /* Fond pour zones subtiles en mode sombre */
+    --muted-foreground: 0 0% 63.9%; /* Texte ou icônes atténués en mode sombre */
+    --accent: 0 0% 14.9%;           /* Fond pour mettre en valeur en mode sombre */
+    --accent-foreground: 0 0% 98%;  /* Texte ou icônes sur le fond d'accent en mode sombre */
+    --destructive: 0 62.8% 30.6%;   /* Couleur pour alertes ou actions destructives en mode sombre */
+    --destructive-foreground: 0 0% 98%; /* Texte ou icônes sur les éléments destructifs en mode sombre */
+    --border: 0 0% 14.9%;           /* Bordure pour délimiter des éléments en mode sombre */
+    --input: 0 0% 14.9%;            /* Bordures ou fonds des champs de saisie en mode sombre */
+    --ring: 0 0% 83.1%;             /* Contour pour les anneaux de focus en mode sombre */
+    --chart-1: 220 70% 50%;         /* Couleur pour visualisations de données en mode sombre */
+    --chart-2: 160 60% 45%;         /* Couleur pour contrastes graphiques en mode sombre */
+    --chart-3: 30 80% 55%;          /* Couleur pour différencier des données en mode sombre */
+    --chart-4: 280 65% 60%;         /* Couleur pour varier les graphiques en mode sombre */
+    --chart-5: 340 75% 55%;         /* Couleur pour distinction supplémentaire en mode sombre */
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

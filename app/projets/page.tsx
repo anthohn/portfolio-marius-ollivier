@@ -24,7 +24,7 @@ export default function Projets() {
                 <ButtonBack href="/"  />
                 <Title2>PROJETS</Title2>
 
-                <div className="bg-[#462525] absolute top-[20rem] -z-10 h-[35rem] blur-[10rem] w-[20rem] sm:w-[30rem] md:w-[40rem] lg:w-[60rem]"></div>
+                <div className="bg-[#ffa5a5] dark:bg-[#462525] absolute top-[20rem] -z-10 h-[35rem] blur-[10rem] w-[20rem] sm:w-[30rem] md:w-[40rem] lg:w-[60rem]"></div>
                 {projectsData.map((project, index) => (
                     <div key={index} className='flex flex-col space-x-10'>
                         <div className="flex flex-col space-y-6 border-b-2 pt-16">

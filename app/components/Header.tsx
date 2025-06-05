@@ -80,7 +80,7 @@ export default function Header() {
                         <div className="md:flex justify-between">
                         {/* Menu visible en mode bureau */}
                             {links.map((link) => (
-                                <Link key={link.href} href={link.href} className="text-white text-lg font-bold hover:text-gray-400">
+                                <Link key={link.href} href={link.href} className="dark:text-white text-lg font-bold hover:text-gray-400">
                                     {link.label}
                                 </Link>
                             ))}
