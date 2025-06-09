@@ -11,9 +11,9 @@ export function Landing() {
   return (
     <>
       <div className="h-[850px] md:h-screen max-h-[1000px] flex flex-col justify-between ">
-        <div className="flex flex-col -space-y-72 md:-space-y-64  mt-10">
+        <div className="flex flex-col -space-y-80 2xl:-space-y-64  2xl:mt-10">
           <div className={cn("relative flex h-[500px] flex-col items-center justify-center overflow-hidden w-full")}>
-            <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate ">
+            <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate">
               <motion.div
                 initial={{ opacity: 0.5, width: "10%" }}
                 whileInView={{ opacity: 1, width: "62.5%" }} // Utilisation de pourcentages pour être plus flexible
