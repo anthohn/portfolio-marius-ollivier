@@ -32,7 +32,7 @@ export default function ContactForm() {
                 >
                     <div className="flex flex-wrap justify-between">
                         <input
-                            className="h-14 w-5/12 border-b-2 bg-transparent focus:outline-none"
+                            className="h-14 w-5/12 border-b-2 bg-transparent focus:outline-none placeholder:text-primary-light dark:placeholder:text-primary-dark"
                             name="senderFirstName"
                             type="text"
                             required
@@ -41,7 +41,7 @@ export default function ContactForm() {
                             autoComplete="off"
                         />
                         <input
-                            className="h-14 w-5/12 border-b-2 bg-transparent focus:outline-none"
+                            className="h-14 w-5/12 border-b-2 bg-transparent focus:outline-none placeholder:text-primary-light dark:placeholder:text-primary-dark"
                             name="senderLastName"
                             type="text"
                             required
@@ -51,7 +51,7 @@ export default function ContactForm() {
                         />
                     </div>
                     <input
-                        className="h-14 border-b-2 bg-transparent focus:outline-none"
+                        className="h-14 border-b-2 bg-transparent focus:outline-none placeholder:text-primary-light dark:placeholder:text-primary-dark"
                         name="senderEmail"
                         type="email"
                         required
@@ -60,7 +60,7 @@ export default function ContactForm() {
                         autoComplete="off"
                     />
                     <textarea
-                        className="h-44 my-3 w-full border-b-2 bg-transparent focus:outline-none resize-none"
+                        className="h-44 my-3 w-full border-b-2 bg-transparent focus:outline-none resize-none placeholder:text-primary-light dark:placeholder:text-primary-dark"
                         name="message"
                         placeholder="Message"
                         required

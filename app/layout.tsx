@@ -5,7 +5,6 @@ import Footer from '@/app/components/Footer'
 import { Toaster } from "react-hot-toast";
 import CustomCursor from '@/app/components/CustomCursor';
 import { ThemeProvider } from "next-themes";
-import { ThemeToggle } from "./theme-toggle";
 
 export const metadata: Metadata = {
   title: {
@@ -23,14 +22,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <body className="bg-background-light dark:bg-background-dark">
+        <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem= {true}>
         <Header />
         <div className="max-w-screen-2xl mx-auto">
           {children}
 
         </div>
-        <ThemeToggle />          
         <Footer />
         <CustomCursor />
         <Toaster position="top-right" />

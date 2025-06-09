@@ -29,8 +29,8 @@ export function Landing() {
                 }}
                 className="absolute inset-auto right-1/2 h-56 overflow-visible w-[60rem] bg-gradient-conic from-red-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
                 >
-                <div className="absolute w-[100%] left-0 bg-white dark:bg-[#171717] h-40 bottom-0 [mask-image:linear-gradient(to_top,white,transparent)]" />
-                <div className="absolute w-40 h-[100%] left-0 bg-white dark:bg-[#171717] bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
+                <div className="absolute w-[100%] left-0 bg-background-light dark:bg-[#171717] h-40 bottom-0 [mask-image:linear-gradient(to_top,white,transparent)]" />
+                <div className="absolute w-40 h-[100%] left-0 bg-background-light dark:bg-[#171717] bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0.5, width: "10%" }}
@@ -46,10 +46,10 @@ export function Landing() {
                 }}
                 className="absolute inset-auto left-1/2 h-56 w-[60rem] bg-gradient-conic from-transparent via-transparent to-red-500 text-white [--conic-position:from_290deg_at_center_top]"
               >
-                <div className="absolute w-40 h-[100%] right-0 bg-white dark:bg-[#171717] bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
-                <div className="absolute w-[100%] right-0 bg-white dark:bg-[#171717] h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
+                <div className="absolute w-40 h-[100%] right-0 bg-background-light dark:bg-[#171717] bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
+                <div className="absolute w-[100%] right-0 bg-background-light dark:bg-[#171717] h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
               </motion.div>
-              <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-white dark:bg-[#171717] blur-2xl"></div>
+              <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-background-light dark:bg-[#171717] blur-2xl"></div>
               <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
               <motion.div
                 initial={{ width: "5%" }}
@@ -74,7 +74,7 @@ export function Landing() {
                 className="absolute inset-auto z-50 h-0.5 w-[60rem] -translate-y-[7rem] bg-red-400"
               ></motion.div>
               {/* <div className="absolute inset-auto z-50 h-44 w-full -translate-y-[12.5rem] dark:bg-[#171717]"></div> */}
-              <div className="absolute inset-auto z-50 h-44 w-full -translate-y-[12.5rem] bg-white dark:bg-[#171717]"></div>
+              <div className="absolute inset-auto z-50 h-44 w-full -translate-y-[12.5rem] bg-background-light dark:bg-[#171717]"></div>
 
             </div>
           </div>
@@ -115,7 +115,7 @@ export function Landing() {
           ease: "easeInOut",
         }}
         viewport={{ once: true }} className="flex justify-center md:justify-end m-10">
-          <div className="flex flex-wrap space-x-5 md:space-x-10 items-center bg-red-500 bg-opacity-20 w-auto p-4 shadow-2xl shadow-red-500/40 border-2 border-red-400 rounded-xl">
+          <div className="flex flex-wrap space-x-5 md:space-x-10 items-center bg-red-500 bg-opacity-20 w-auto p-4 shadow-2xl shadow-red-500/40 border-2 border-btnBackground-light dark:border-btnBackground-dark rounded-xl">
             <div className="w-[50px] md:w-[70px]">
               <Image 
                 src={imgCoverArtistes1} 

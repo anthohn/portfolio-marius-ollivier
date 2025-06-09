@@ -4,7 +4,8 @@ import Image from 'next/image'
 import Instagram from "../../public/svg/instagram.svg";
 import { links } from "@/lib/data";
 import Link from 'next/link';
-import swissBerry from '@/public/svg/swiss-berry.svg';
+import swissBerry from '@/public/svg/logo.svg';
+import { ThemeToggle } from "../theme-toggle";
 
 export default function About() {
     return (
@@ -23,6 +24,7 @@ export default function About() {
                                     </li>
                                 ))}
                             </div>
+                            <ThemeToggle />
                         </div>
                         <div className='flex md:w-1/2 justify-center flex-row space-x-5 items-center'>
                             <a className='underline decoration-[#8A1D1D] underline-offset-4 decoration-2' href="mailto:contact@marius-ollivier.ch">contact@marius-ollivier.ch</a>
@@ -42,9 +44,11 @@ export default function About() {
                     priority
                     src={swissBerry}
                     alt="Swiss Berry icon"
-                    width={100}
+                    width={50}
                     />
+                    <span className="text-3xl font-bold text-primary-light dark:text-primary-dark">Swissberry</span>
                 </a>
+
             </footer>
         </>
     )

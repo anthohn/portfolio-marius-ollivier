@@ -1,17 +1,37 @@
 "use client";
 import { useTheme } from "next-themes";
-import { Button } from "@/app/components/ui/button";
-import { FaSun, FaMoon } from "react-icons/fa";
-
+import { useState, useEffect } from "react";
 
 export function ThemeToggle() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-    const {theme , setTheme} = useTheme();
+  // Définir mounted à true une fois que le composant est monté côté client
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
+  // Rendu par défaut pour le serveur (cohérent avec defaultTheme="system")
+  if (!mounted) {
     return (
-        <Button variant="outline" size="icon" className="bottom-0 absolute rounded-full" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-            <FaSun className="absolute h-10 w-10 rotate-0 scale-100 dark:-rotate-90 dark:scale-0"></FaSun>
-            <FaMoon className="absolute h-10 w-10 rotate-90 scale-0 dark:-rotate-0 dark:scale-100"></FaMoon>
-        </Button>
-    )
+      <button
+        className="text-primary-light dark:text-primary-dark"
+        onClick={() => setTheme("light")}
+        aria-label="Changer le thème"
+      >
+        ☀️
+      </button>
+    );
+  }
+
+  // Rendu côté client après montage
+  return (
+    <button
+      className="text-primary-light dark:text-primary-dark"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      aria-label="Changer le thème"
+    >
+      {theme === "light" ? "🌙" : "☀️"}
+    </button>
+  );
 }
