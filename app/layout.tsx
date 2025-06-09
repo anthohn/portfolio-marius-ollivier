@@ -24,13 +24,14 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <body className="bg-background-light dark:bg-background-dark">
         <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem= {true}>
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
         <Header />
         <div className="max-w-screen-2xl mx-auto">
           {children}
-
         </div>
         <Footer />
         <CustomCursor />
