@@ -193,7 +193,7 @@ export default function Projects() {
         <motion.a 
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.8}}
-          href="/projets" className="px-8 py-3 w-full mx-auto bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-sm mt-8 md:mt-16 space-x-16 group items-center">
+          href="/projets" className="px-8 py-3 w-full mx-auto bg-btnBackground-light dark:bg-btnBackground-dark rounded-sm mt-8 md:mt-16 space-x-16 group items-center">
           <p className="text-xl sm:text-3xl md:text-4xl italic text-center text-black font-bold group-hover:invert duration-1000">TOUS LES PROJETS</p>
         </motion.a>
       </motion.section>

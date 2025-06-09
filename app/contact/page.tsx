@@ -21,7 +21,7 @@ export default function Contact() {
             <div className="text-center">
                 <Title2>CONTACT</Title2>
             </div>
-            <div className="bg-[#462525] absolute top-[20rem] -z-10 h-[35rem] blur-[10rem] w-[20rem] sm:w-[30rem] md:w-[40rem] lg:w-[60rem]"></div>
+            <div className="bg-fadeBackground-light dark:bg-fadeBackground-dark absolute top-[20rem] -z-10 h-[35rem] blur-[10rem] w-[20rem] sm:w-[30rem] md:w-[40rem] lg:w-[60rem]"></div>
             <div className="flex justify-center">
                 <div className="w-full lg:mx-0 lg:w-2/3">
                     <ContactForm />

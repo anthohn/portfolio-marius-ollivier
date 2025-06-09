@@ -6,17 +6,32 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-      },
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+  	extend: {
+  		colors: {
+			background: {
+				light : "#f2f2f2",
+				dark : "#171717",
+			},
+			fadeBackground: {
+				light : "#D96161",
+				dark : "#462525",
+			},
+			primary: {
+				light : "#000000",
+				dark : "#ffffff",
+			},
+			secondary: {
+				light : "#fbbf24",
+				dark : "#f59e0b",
+			},
+			btnBackground: {
+				light : "#8A1D1D",		
+				dark : "#8A1D1D",
+			},
+		}
+  	}
   },
-  plugins: [],
 };
 export default config;
