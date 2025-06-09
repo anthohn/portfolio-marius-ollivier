@@ -1,6 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
+// Make sure the file exists at the specified path, or update the import path if necessary
 import EmailTemplate from "@/app/emails/index";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
