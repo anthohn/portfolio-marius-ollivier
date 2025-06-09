@@ -12,7 +12,7 @@ export default function SubmitBtn() {
       whileHover={{ scale: 1.1 }}
       transition={{ duration: 0.8}}
       type="submit"
-      className="p-3 w-32 flex items-center justify-between  bg-btnBackground-light dark:bg-btnBackground-dark rounded-sm group"
+      className="p-3 w-32 flex items-center justify-between bg-btnBackground-light dark:bg-btnBackground-dark rounded-sm group"
     >
       <p className="button-text group-hover:invert transition duration-1000 font-semibold text-primary-light dark:text-primary-dark">Envoyer</p>
       <Image

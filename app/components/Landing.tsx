@@ -88,7 +88,7 @@ export function Landing() {
               ease: "easeInOut",
             }}
             viewport={{ once: true }}
-            className={`${bodoni_moda.className} text-center leading-none text-[100px] md:leading-normal md:text-[105px] lg:text-[140px] xl:text-[160px] 2xl:text-[180px] bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-red-300 dark:to-white`}>
+            className={`${bodoni_moda.className} text-center text-[100px] md:leading-normal md:text-[105px] lg:text-[110px] xl:text-[130px] 2xl:text-[180px] bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-red-300 dark:to-white`}>
             Marius Ollivier
           </motion.h1>
           
@@ -102,7 +102,7 @@ export function Landing() {
               ease: "easeInOut",
             }}
             viewport={{ once: true }}
-            className={`${bodoni_moda.className} -mt-40 md:-mt-48 lg:-mt-56 xl:-mt-60 2xl:-mt-64 text-center italic leading-none md:leading-normal text-[30px] md:text-[32px] lg:text-[34px] xl:text-[36px] 2xl:text-[40px] bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-red-300 dark:to-white`}>
+            className={`${bodoni_moda.className}  text-center italic leading-none md:leading-normal text-[30px] md:text-[32px] lg:text-[34px] xl:text-[36px] 2xl:text-[40px] bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-red-300 dark:to-white`}>
             Photographe Suisse
           </motion.h1>
 
