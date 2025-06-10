@@ -35,7 +35,7 @@ export default function Header() {
             {/* Utilisation de Framer Motion pour la transition du background */}
             <motion.nav
                 className={`w-full p-10 z-50 fixed top-0 transition-all duration-300
-                    ${scrolled || isOpen ? 'bg-[#462525] bg-opacity-90' : 'bg-transparent'}`}
+                    ${scrolled || isOpen ? 'bg-background-light dark:bg-background-dark bg-opacity-90' : 'bg-transparent'}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ 
