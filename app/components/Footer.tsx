@@ -45,9 +45,9 @@ export default function About() {
                     priority
                     src={swissBerry}
                     alt="Swiss Berry icon"
-                    width={50}
+                    width={30}
                     />
-                    <span className="text-3xl font-bold text-primary-light dark:text-primary-dark">Swissberry</span>
+                    <span className="text-2xl font-bold text-primary-light dark:text-primary-dark">Swissberry</span>
                 </a>
 
             </footer>
