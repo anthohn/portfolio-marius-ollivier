@@ -4,7 +4,6 @@ import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { Toaster } from "react-hot-toast";
 import CustomCursor from '@/app/components/CustomCursor';
-import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: {
@@ -21,14 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" suppressHydrationWarning>
-      <body className="bg-background-light dark:bg-background-dark">
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+    <html lang="fr">
+      <body className="bg-background text-primary">
         <Header />
         <div className="max-w-screen-2xl mx-auto">
           {children}
@@ -36,7 +29,6 @@ export default function RootLayout({
         <Footer />
         <CustomCursor />
         <Toaster position="top-right" />
-        </ThemeProvider>
       </body>
     </html>
   );

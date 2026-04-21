@@ -35,7 +35,7 @@ export default function Header() {
             {/* Utilisation de Framer Motion pour la transition du background */}
             <motion.nav
                 className={`w-full p-10 z-50 fixed top-0 transition-all duration-300
-                    ${scrolled || isOpen ? 'bg-background-light dark:bg-background-dark bg-opacity-90' : 'bg-transparent'}`}
+                    ${scrolled || isOpen ? 'bg-background bg-opacity-90' : 'bg-transparent'}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ 
@@ -80,7 +80,7 @@ export default function Header() {
                         <div className="md:flex justify-between">
                         {/* Menu visible en mode bureau */}
                             {links.map((link) => (
-                                <Link key={link.href} href={link.href} className="dark:text-white text-lg font-bold hover:text-gray-400">
+                                <Link key={link.href} href={link.href} className="text-white text-lg font-bold hover:text-gray-400">
                                     {link.label}
                                 </Link>
                             ))}

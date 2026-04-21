@@ -51,7 +51,7 @@ export default function ProjectClient({ project }: Props) {
     >
       <ButtonBack href="/projets" />
       <Title2>{project.title}</Title2>
-      <div className="dark:bg-[#462525] absolute top-[15rem] -z-10 right-[5rem] h-[35rem] rounded-full blur-[10rem] w-[60rem]"></div>
+      <div className="bg-[#462525] absolute top-[15rem] -z-10 right-[5rem] h-[35rem] rounded-full blur-[10rem] w-[60rem]"></div>
 
       {/* Affiche toutes les images du projet avec lazy loading */}
       <div className="flex flex-wrap gap-20 justify-center">

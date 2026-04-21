@@ -14,7 +14,7 @@ export default function ButtonBack({ href }: ButtonProps) {
         transition={{
           duration: 0.8,
         }}
-      href={href} className="relative inline-flex items-center py-2 px-4 space-x-6 bg-gradient-radial bg-btnBackground-light dark:bg-btnBackground-dark rounded-sm group">
+      href={href} className="relative inline-flex items-center py-2 px-4 space-x-6 bg-gradient-radial bg-btnBackground rounded-sm group">
 
       <div className="relative z-10">
         <Image
