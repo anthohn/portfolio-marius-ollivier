@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Instagram from "../../public/svg/instagram.svg";
 import { links } from "@/lib/data";
 import Link from 'next/link';
-import swissBerry from '@/public/svg/logo.svg';
 
 export default function About() {
     return (
@@ -28,24 +27,17 @@ export default function About() {
                             <a className='underline decoration-[#8A1D1D] underline-offset-4 decoration-2' href="mailto:contact@marius-ollivier.ch">contact@marius-ollivier.ch</a>
                             <a className='bg-gradient-radial from-[#8A1D1D] to-[#884F4F] rounded-md p-1' href="https://www.instagram.com/p/C27u1PPMJKm/" target="_blank">
                                 <Image
-                                priority
-                                src={Instagram}
-                                alt="instagram"
+                                    priority
+                                    src={Instagram}
+                                    alt="instagram"
                                 />
                             </a>
                         </div>
                     </div>
                 </div>
-                <a className="flex w-full justify-center space-x-4 items-center" href="https://www.swiss-berry.com" target="_blank">
-                    <p>Website made by </p>
-
-                    <Image
-                    priority
-                    src={swissBerry}
-                    alt="Swiss Berry icon"
-                    width={30}
-                    />
-                    <span className="text-2xl font-bold text-primary">Swissberry</span>
+                <a href="https://anthony-hohn.ch" target="_blank" className="flex w-full justify-center space-x-2 items-center hover:opacity-80 transition-opacity">
+                    <p className="text-sm">Réalisé par </p>
+                    <span className="text-sm">Anthony Höhn</span>
                 </a>
 
             </footer>
